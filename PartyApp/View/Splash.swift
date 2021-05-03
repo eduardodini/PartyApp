@@ -2,12 +2,12 @@
 //  ContentView.swift
 //  PartyApp
 //
-//  Created by Eduardo Dini on 02/05/21.
+//  View reflects the model, is stateless and declaratibe.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct Splash: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
@@ -16,6 +16,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Splash()
     }
 }
