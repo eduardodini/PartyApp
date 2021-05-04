@@ -11,7 +11,7 @@ import SwiftUI
 struct PartyApp: App {
     var body: some Scene {
         WindowGroup {
-            Splash()
+            Onboarding()
         }
     }
 }
