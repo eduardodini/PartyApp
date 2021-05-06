@@ -11,7 +11,7 @@ struct DiscoverView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack {
+                VStack() {
                     Section(title: "Os mais populares")
                     Section(title: "Recomendados para você")
                     Section(title: "Seus amigos também curtiram")
@@ -20,6 +20,7 @@ struct DiscoverView: View {
                 .navigationTitle("Descubra")
             }
         }
+        .accentColor(.black)
     }
 }
 
@@ -31,7 +32,7 @@ struct Discover_Previews: PreviewProvider {
 
 struct EventCard: View {
     var body: some View {
-        NavigationLink(destination: Event()) {
+        NavigationLink(destination: EventView()) {
             VStack {
                 Spacer()
                 HStack {
@@ -70,10 +71,13 @@ struct EventCard: View {
                 .padding(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
                 .background(Color.white)
             }
-            .frame(width: 254, height: 192)
             .background(Color.gray.opacity(0.2))
             .cornerRadius(14)
-            .shadow(color: .black.opacity(0.1), radius: 24, y: 4)
+            .padding(.bottom, 18)
+            .padding(.trailing, -8)
+            .padding(.leading)
+            .shadow(color: .black.opacity(0.1), radius: 10)
+            .frame(width: 274, height: 210)
         }
         .buttonStyle(PlainButtonStyle())
     }
@@ -87,6 +91,7 @@ struct Section: View {
             Text(title)
                 .font(.title2)
                 .fontWeight(.semibold)
+                .padding(.leading)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
@@ -95,7 +100,6 @@ struct Section: View {
                 }
             }
         }
-        .padding(.leading)
         .padding(.top)
     }
 }
