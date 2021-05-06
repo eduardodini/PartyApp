@@ -20,7 +20,7 @@ struct DiscoverView: View {
                 .navigationTitle("Descubra")
             }
         }
-        .accentColor(.black)
+        .accentColor(.white)
     }
 }
 
