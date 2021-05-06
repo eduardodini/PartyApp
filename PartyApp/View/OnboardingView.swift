@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct Onboarding: View {
+//TODO: implementar navegação entre os cards do onboarding
+
+struct OnboardingView: View {
     var body: some View {
         ThirdCard()
     }
@@ -18,9 +20,8 @@ struct FirstCard: View {
         VStack {
             Text("Bem-Vindo")
                 .font(.system(size: 17, weight: .semibold))
-                .tracking(-0.41)
-                .multilineTextAlignment(.center)
                 .padding()
+            
             //TODO: imagem
             Circle()
                 .fill(Color(#colorLiteral(red: 0.7686274647712708, green: 0.7686274647712708, blue: 0.7686274647712708, alpha: 1)))
@@ -28,12 +29,11 @@ struct FirstCard: View {
                 .padding()
             Text("Seus Eventos num só Lugar")
                 .font(.system(size: 22, weight: .semibold))
-                .tracking(0.35)
                 .padding()
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat est sapien libero risus mauris tortor. Tempor in neque sit ipsum vitae dolor.")
                 .font(.system(size: 17, weight: .light))
-                .tracking(-0.41)
                 .padding()
+            
             HStack{
                 //TODO: action dos buttons (skip, next)
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
@@ -44,10 +44,9 @@ struct FirstCard: View {
                         Text("Skip")
                             .font(.system(size: 20, weight: .medium))
                             .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                            .tracking(0.38)
-                            .multilineTextAlignment(.center)
                     }
                 }
+                
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 21)
@@ -56,8 +55,7 @@ struct FirstCard: View {
                         Text("Next")
                             .font(.system(size: 20, weight: .medium))
                             .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                            .tracking(0.38)
-                            .multilineTextAlignment(.center)
+
                     }
                 }
             }
@@ -77,31 +75,31 @@ struct SecondCard: View {
             Circle()
                 .fill(Color(#colorLiteral(red: 0.7686274647712708, green: 0.7686274647712708, blue: 0.7686274647712708, alpha: 1)))
                 .frame(width: 277, height: 277)
+            
             Text("Encontre Eventos perto de você")
                 .font(.system(size: 28, weight: .semibold))
-                .tracking(0.36)
+
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat est sapien libero risus mauris tortor.")
                 .font(.system(size: 17, weight: .regular))
-                .tracking(-0.41)
+            
             HStack {
-                Text("📍")
-                    .font(.system(size: 20, weight: .regular))
-                    .tracking(-0.41)
+                Image(systemName: "mappin.and.ellipse")
                 //TODO: textField -> pesquisa/define localização
                 TextField("Localização", text: $localizacao)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textFieldStyle(DefaultTextFieldStyle())
                     .disableAutocorrection(true)
             }
+            .underlineTextField()
             .padding()
+            
             HStack {
-                Text("🎯")
-                    .font(.system(size: 20, weight: .regular))
-                    .tracking(-0.41)
+                
+                Image(systemName: "target")
                 //TODO: .onTapGesture -> pega localização atual
                 Text("Usar localização atual")
                     .font(.system(size: 17, weight: .regular))
                     .foregroundColor(Color(#colorLiteral(red: 0, green: 0.48, blue: 1, alpha: 1)))
-                    .tracking(-0.41)
+
             }
             .padding()
 
@@ -114,12 +112,19 @@ struct SecondCard: View {
                     Text("Next")
                         .font(.system(size: 20, weight: .medium))
                         .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                        .tracking(0.38)
-                        .multilineTextAlignment(.center)
                 }
             }
         }
-        .padding()
+        .padding(20)
+    }
+}
+
+extension View {
+    func underlineTextField() -> some View {
+        self
+            .padding(.vertical, 10)
+            .overlay(Rectangle().frame(height: 2).padding(.top, 35))
+            .padding(10)
     }
 }
 
@@ -129,14 +134,15 @@ struct ThirdCard: View {
     @State private var localizacao: String = " "
     
     var body: some View {
+        
         VStack {
             Text("Acompanhe os eventos que seus amigos estão curtindo")
                 .font(.system(size: 28, weight: .semibold))
-                .tracking(0.36)
+                .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
             
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat est sapien libero risus mauris tortor.")
                 .font(.system(size: 17, weight: .regular))
-                .tracking(-0.41)
+                .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
             
             //TODO: textField -> email e senha
             TextField("Email", text: $localizacao)
@@ -150,9 +156,7 @@ struct ThirdCard: View {
             Text("Esqueceu sua senha?")
                 .font(.system(size: 12, weight: .regular))
                 .foregroundColor(Color(#colorLiteral(red: 0, green: 0.48, blue: 1, alpha: 1)))
-                .tracking(-0.41)
-                .multilineTextAlignment(.center)
-            
+
             //TODO: entrar button
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                 ZStack {
@@ -162,10 +166,7 @@ struct ThirdCard: View {
                     Text("Entrar")
                         .font(.system(size: 20, weight: .medium))
                         .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                        .tracking(0.38)
-                        .multilineTextAlignment(.center)
             }
-            
             
             }
             ZStack {
@@ -174,8 +175,6 @@ struct ThirdCard: View {
                 Text("Ou entre com")
                     .font(.system(size: 12, weight: .regular))
                     .foregroundColor(Color(#colorLiteral(red: 0.24, green: 0.24, blue: 0.26, alpha: 0.72)))
-                    .tracking(-0.41)
-                    .multilineTextAlignment(.center)
             }
             HStack {
                 //TODO: .onTapGesture Entrar com Apple/Google/Facebook
@@ -187,7 +186,6 @@ struct ThirdCard: View {
                     Text("")
                         .font(.system(size: 23, weight: .medium))
                         .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                        .tracking(0.38).multilineTextAlignment(.center)
                 }
                 ZStack {
                     Circle()
@@ -196,8 +194,8 @@ struct ThirdCard: View {
                     Text("")
                         .font(.system(size: 23, weight: .medium))
                         .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                        .tracking(0.38).multilineTextAlignment(.center)
                 }
+                
                 ZStack {
                     Circle()
                         .fill(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
@@ -205,36 +203,29 @@ struct ThirdCard: View {
                     Text("")
                         .font(.system(size: 23, weight: .medium))
                         .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                        .tracking(0.38).multilineTextAlignment(.center)
                 }
             }
 
             Text("Não possui conta ainda?\n")
                 .font(.system(size: 13, weight: .regular))
-                .foregroundColor(Color(#colorLiteral(red: 0.21, green: 0.21, blue: 0.21, alpha: 1)))
-                .tracking(-0.08) +
+                .foregroundColor(Color(#colorLiteral(red: 0.21, green: 0.21, blue: 0.21, alpha: 1))) +
                 //TODO: .onTapGesture -> cadastro
                 Text("Cadastre-se")
                     .font(.system(size: 13, weight: .regular))
                     .foregroundColor(Color(#colorLiteral(red: 0, green: 0.48, blue: 1, alpha: 1)))
-                    .tracking(-0.08)
            
             //TODO: onTapGesture -> Skip
             Text("Pular esta etapa")
                 .font(.system(size: 17, weight: .regular))
                 .foregroundColor(Color(#colorLiteral(red: 0, green: 0.48, blue: 1, alpha: 1)))
-                .tracking(-0.41)
-                .multilineTextAlignment(.center)
 
         }
         .padding()
     }
 }
 
-
-
 struct Onboarding_Previews: PreviewProvider {
     static var previews: some View {
-        Onboarding()
+        OnboardingView()
     }
 }

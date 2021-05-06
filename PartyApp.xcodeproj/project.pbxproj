@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31B6BA3A264085A7001BF48A /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6BA39264085A7001BF48A /* Onboarding.swift */; };
-		31B6BA3E264085CB001BF48A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6BA3D264085CB001BF48A /* Profile.swift */; };
+		31B6BA3A264085A7001BF48A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6BA39264085A7001BF48A /* OnboardingView.swift */; };
+		31B6BA3E264085CB001BF48A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6BA3D264085CB001BF48A /* ProfileView.swift */; };
 		31B6BA40264085DC001BF48A /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6BA3F264085DC001BF48A /* Search.swift */; };
 		31B6BA42264085F5001BF48A /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6BA41264085F5001BF48A /* Discover.swift */; };
 		31B6BA4426408643001BF48A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6BA4326408643001BF48A /* Event.swift */; };
@@ -22,8 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		31B6BA39264085A7001BF48A /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
-		31B6BA3D264085CB001BF48A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		31B6BA39264085A7001BF48A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		31B6BA3D264085CB001BF48A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		31B6BA3F264085DC001BF48A /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		31B6BA41264085F5001BF48A /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 		31B6BA4326408643001BF48A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -53,10 +53,10 @@
 			isa = PBXGroup;
 			children = (
 				31E76844263F6E4000F8F65B /* Splash.swift */,
-				31B6BA39264085A7001BF48A /* Onboarding.swift */,
+				31B6BA39264085A7001BF48A /* OnboardingView.swift */,
 				31B6BA41264085F5001BF48A /* Discover.swift */,
 				31B6BA3F264085DC001BF48A /* Search.swift */,
-				31B6BA3D264085CB001BF48A /* Profile.swift */,
+				31B6BA3D264085CB001BF48A /* ProfileView.swift */,
 				31B6BA4526408653001BF48A /* MyEvents.swift */,
 				31B6BA4326408643001BF48A /* Event.swift */,
 			);
@@ -189,9 +189,9 @@
 				31E76852263F76D900F8F65B /* Model.swift in Sources */,
 				31E76845263F6E4000F8F65B /* Splash.swift in Sources */,
 				31B6BA42264085F5001BF48A /* Discover.swift in Sources */,
-				31B6BA3A264085A7001BF48A /* Onboarding.swift in Sources */,
+				31B6BA3A264085A7001BF48A /* OnboardingView.swift in Sources */,
 				31B6BA4426408643001BF48A /* Event.swift in Sources */,
-				31B6BA3E264085CB001BF48A /* Profile.swift in Sources */,
+				31B6BA3E264085CB001BF48A /* ProfileView.swift in Sources */,
 				31E76854263F76FD00F8F65B /* ViewModel.swift in Sources */,
 				31B6BA40264085DC001BF48A /* Search.swift in Sources */,
 				31B6BA4626408653001BF48A /* MyEvents.swift in Sources */,
