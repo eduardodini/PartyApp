@@ -56,6 +56,7 @@ struct PrimeiroBloco: View {
                     Image(systemName: "gear")
                 }
                 .foregroundColor(.white)
+             
                 
                 ZStack {
                     Circle()
@@ -96,8 +97,9 @@ struct PrimeiroBloco: View {
                 }
                 
             }
-            .padding(.init(top: 20, leading: 20, bottom: 20, trailing: 20))
-            
+            .padding(20)
+            //FIXME: tentei chegar com a imagem no centro do círculo mais claro, mas desceu também o botão de editar e configurações
+            .padding(.bottom, -50)
         }
         .frame(width: 415, height: 314)
         .ignoresSafeArea()
@@ -124,7 +126,11 @@ struct SegundoBloco: View {
                         .font(.system(size: 17, weight: .semibold))
                 }
                 .padding()
-                
+                Rectangle()
+                    .frame(width: 1, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.gray)
+                    .opacity(0.5)
+                    .padding(10)
                 VStack {
                     Text("42")
                         .font(.system(size: 34, weight: .bold))
@@ -133,7 +139,11 @@ struct SegundoBloco: View {
                         .font(.system(size: 17, weight: .semibold))
                 }
                 .padding()
-                
+                Rectangle()
+                    .frame(width: 1, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.gray)
+                    .opacity(0.5)
+                    .padding(10)
                 VStack {
                     Text("42")
                         .font(.system(size: 34, weight: .bold))
@@ -144,7 +154,8 @@ struct SegundoBloco: View {
                 .padding()
             }
         }
-        .padding(.all)
+        .padding()
+        .padding(.top, -50)
     }
 }
 

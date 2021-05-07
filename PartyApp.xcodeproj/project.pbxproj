@@ -14,7 +14,7 @@
 		31B6BA4426408643001BF48A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6BA4326408643001BF48A /* Event.swift */; };
 		31B6BA4626408653001BF48A /* MyEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B6BA4526408653001BF48A /* MyEvents.swift */; };
 		31E76843263F6E4000F8F65B /* PartyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E76842263F6E4000F8F65B /* PartyApp.swift */; };
-		31E76845263F6E4000F8F65B /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E76844263F6E4000F8F65B /* Splash.swift */; };
+		31E76845263F6E4000F8F65B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E76844263F6E4000F8F65B /* SplashView.swift */; };
 		31E76847263F6E4100F8F65B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E76846263F6E4100F8F65B /* Assets.xcassets */; };
 		31E7684A263F6E4100F8F65B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31E76849263F6E4100F8F65B /* Preview Assets.xcassets */; };
 		31E76852263F76D900F8F65B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E76851263F76D900F8F65B /* Model.swift */; };
@@ -30,7 +30,7 @@
 		31B6BA4526408653001BF48A /* MyEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEvents.swift; sourceTree = "<group>"; };
 		31E7683F263F6E4000F8F65B /* PartyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E76842263F6E4000F8F65B /* PartyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyApp.swift; sourceTree = "<group>"; };
-		31E76844263F6E4000F8F65B /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		31E76844263F6E4000F8F65B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		31E76846263F6E4100F8F65B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31E76849263F6E4100F8F65B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		31E7684B263F6E4100F8F65B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		31B6BA3826408561001BF48A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				31E76844263F6E4000F8F65B /* Splash.swift */,
+				31E76844263F6E4000F8F65B /* SplashView.swift */,
 				31B6BA39264085A7001BF48A /* OnboardingView.swift */,
 				31B6BA41264085F5001BF48A /* Discover.swift */,
 				31B6BA3F264085DC001BF48A /* Search.swift */,
@@ -187,7 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31E76852263F76D900F8F65B /* Model.swift in Sources */,
-				31E76845263F6E4000F8F65B /* Splash.swift in Sources */,
+				31E76845263F6E4000F8F65B /* SplashView.swift in Sources */,
 				31B6BA42264085F5001BF48A /* Discover.swift in Sources */,
 				31B6BA3A264085A7001BF48A /* OnboardingView.swift in Sources */,
 				31B6BA4426408643001BF48A /* Event.swift in Sources */,
